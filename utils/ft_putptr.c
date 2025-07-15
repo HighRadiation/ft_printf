@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 19:21:51 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/15 15:51:44 by boksuz           ###   ########.fr       */
+/*   Created: 2025/07/15 15:39:15 by boksuz            #+#    #+#             */
+/*   Updated: 2025/07/15 15:39:21 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-
-int 	ft_putnbr(int n);
-int		ft_putchar(char c);
-int		ft_putptr(void *ptr);
-int		ft_putstr(const char *s);
-int		ft_putunbr(unsigned int n);
-int		ft_format(char c, va_list *args);
-int		ft_printf(const char *format, ...);
-int		ft_puthex(unsigned long n, int upper);
-
-#endif
+int	ft_putptr(void *ptr)
+{
+	int len; 
+	
+	len = 0;
+	len += ft_putstr("0x");
+	len += ft_puthex((unsigned long)ptr, 0);
+    return (len);
+}

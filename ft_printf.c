@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 19:14:35 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/14 19:26:01 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/15 15:19:04 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_printf(const char *format, ...)
 	int		total;
 
 	total = 0;
+	if (!format)
+		return (0);
 	va_start(args, format);
 	while (*format)
 	{
