@@ -4,8 +4,8 @@ WFLAGS	=	-Wall -Wextra -Werror -I.
 AR		=	ar rcs
 
 # Colors
-RED		=	\033[1;91m	# Bold Bright Red
-GREEN	=	\033[1;92m	# Bold Bright Green
+RED		=	\033[1;91m
+GREEN	=	\033[1;92m
 RESET	=	\033[0m
 
 SRCS	=	ft_printf.c \
@@ -21,7 +21,7 @@ OBJS	=	$(SRCS:.c=.o)
 
 # Rule to create .o files from .c files
 %.o: %.c
-	$(CC) $(WFLAGS) -c $< -o $@
+	@$(CC) $(WFLAGS) -c $< -o $@
 
 
 # all just needs to build the library, not link it
@@ -30,11 +30,11 @@ all: $(NAME)
 
 # Rule to create the archive
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
 
 clean:
 	@rm -f $(OBJS) a.out
-	@echo  "$(RED)Deleted object files!$(RESET)\n"
+	@printf	"$(RED)Deleted object files!$(RESET)\n"
 
 fclean:
 	@rm -f $(NAME) $(OBJS)
