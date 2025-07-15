@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:35:56 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/15 15:36:01 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/15 18:05:29 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    return write(1, &c, 1);
+	return (write(1, &c, 1));
 }

@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:41:00 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/15 15:41:06 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/15 18:06:10 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putunbr(unsigned int n)
+int	ft_putunbr(unsigned int n)
 {
-    char c;
-    int len;
-	
+	char	c;
+	int		len;
+
 	len = 0;
-    if (n >= 10)
-        len += ft_putunbr(n / 10);
-    c = n % 10 + '0';
-    len += ft_putchar(c);
-    return (len);
+	if (n >= 10)
+		len += ft_putunbr(n / 10);
+	c = n % 10 + '0';
+	len += ft_putchar(c);
+	return (len);
 }

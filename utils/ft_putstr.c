@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:39:43 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/15 15:39:44 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/15 18:05:02 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int	ft_putstr(const char *s)
 {
-    int i = 0;
-    if (!s) return write(1, "(null)", 6);
-    while (s[i])
-        write(1, &s[i++], 1);
-    return (i);
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (write(1, "(null)", 6));
+	while (s[i])
+		write(1, &s[i++], 1);
+	return (i);
 }
