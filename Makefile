@@ -57,6 +57,15 @@ run:
 	@./myprog
 	@echo "$(RESET)"
 
+norm:
+	@out=$$(norminette $$(find . -type f \( -name "*.c" -o -name "*.h" \) ! -name "main.c")); \
+	echo "$$out"; \
+	if echo "$$out" | grep -q "Error"; then \
+		echo "$(RED)Norm error found!$(RESET)"; \
+	else \
+		echo "$(GREEN)Norms passed!$(RESET)"; \
+	fi
+
 re: fclean all
 
-.PHONY: all clean fclean clear comp run re
+.PHONY: all clean fclean clear comp run  norm re
