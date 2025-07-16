@@ -5,6 +5,8 @@ AR		=	ar rcs
 
 # Colors
 RED		=	\033[1;91m
+YELLOW	=	\033[1;93m
+BLUE	=	\033[1;94m
 GREEN	=	\033[1;92m
 RESET	=	\033[0m
 
@@ -40,6 +42,21 @@ fclean:
 	@rm -f $(NAME) $(OBJS)
 	@printf "$(RED)Deleted object and archive files!$(RESET)\n"
 
+clear:
+	@echo "$(YELLOW)Cleaning...$(RESET)\n"
+	@rm -rf myprog
+	@echo "$(GREEN)All temp files are deleted.$(RESET)\n"
+
+comp:
+	@$(CC) main.c libftprintf.a -o myprog && \
+	echo "$(GREEN)Compile successful.$(RESET)" || \
+	echo "$(RED)Compile failed.$(RESET)"
+
+run:
+	@echo "$(YELLOW)Running...$(RESET)\n"
+	@./myprog
+	@echo "$(RESET)"
+
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean clear comp run re

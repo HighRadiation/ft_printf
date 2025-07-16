@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 19:21:51 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/15 17:58:09 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/16 21:04:15 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int		ft_putstr(const char *s);
 int		ft_putunbr(unsigned int n);
 int		ft_format(char c, va_list *args);
 int		ft_printf(const char *format, ...);
-int		ft_puthex(unsigned long n, int upper);
+int		ft_puthex(unsigned long n, char *upper);
 
 #endif

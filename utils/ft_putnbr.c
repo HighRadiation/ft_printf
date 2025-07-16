@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:38:17 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/15 18:01:33 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/16 21:05:06 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+// #include "ft_printf.h"
 
-int	ft_putnbr(int n)
-{
-	char	c;
-	int		len;
-}
+// int	ft_putnbr(int n)
+// {
+// 	char	c;
+// 	int		len;
+
+	
+// }
