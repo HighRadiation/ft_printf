@@ -31,6 +31,12 @@ Başarılı bir `ft_printf()` implementasyonu için temiz, yapılandırılmış 
 
 ## 💻 Kurulum ve Kullanım
 
+### Proje için
+
+Bu projede unbuffered yaklaşım var. Bu:
+	- Basit ve anlaşılır
+	- Çok fazla sistem çağrısı, performans arttırmak istenirse buffer kullanılabilir, büyük projelerde buffer kullanmalısın.
+
 ### Derleme
 
 ```bash

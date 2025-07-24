@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:36:28 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/16 21:10:27 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/24 17:54:36 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_puthex(unsigned long n, char *upper)
 {

@@ -43,27 +43,26 @@ fclean:
 	@printf "$(RED)Deleted object and archive files!$(RESET)\n"
 
 clear:
-	@echo "$(YELLOW)Cleaning...$(RESET)\n"
+	@printf "$(YELLOW)Cleaning...$(RESET)\n"
 	@rm -rf myprog
-	@echo "$(GREEN)All temp files are deleted.$(RESET)\n"
+	@printf "$(GREEN)All temp files are deleted.$(RESET)\n"
 
 comp:
-	@$(CC) main.c libftprintf.a -o myprog && \
-	echo "$(GREEN)Compile successful.$(RESET)" || \
-	echo "$(RED)Compile failed.$(RESET)"
+	@if [ -f main.c ]; then \
+		$(CC) main.c libftprintf.a -o myprog && \
+		printf "$(GREEN)Compile successful.$(RESET)\n" || \
+		printf "$(RED)Compile failed.$(RESET)\n"; \
+	else \
+		printf "$(RED)Error: main.c not found.$(RESET)\n"; \
+	fi
 
 run:
-	@echo "$(YELLOW)Running...$(RESET)\n"
-	@./myprog
-	@echo "$(RESET)"
-
-norm:
-	@out=$$(norminette $$(find . -type f \( -name "*.c" -o -name "*.h" \) ! -name "main.c")); \
-	echo "$$out"; \
-	if echo "$$out" | grep -q "Error"; then \
-		echo "$(RED)Norm error found!$(RESET)"; \
+	@if [ -f main.c ]; then \
+		printf "$(YELLOW)Running...$(RESET)\n"; \
+		./myprog; \
+		printf "$(RESET)"; \
 	else \
-		echo "$(GREEN)Norms passed!$(RESET)"; \
+		printf "$(RED)Error: program not found.$(RESET)\n"; \
 	fi
 
 re: fclean all

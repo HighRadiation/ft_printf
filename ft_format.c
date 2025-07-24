@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_format.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boksuz <boksuz@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 20:03:57 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/16 21:08:29 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/24 17:54:32 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	ft_format(char c, va_list *args)
 		return (ft_putchar(va_arg(*args, int)));
 	if (c == 's')
 		return (ft_putstr(va_arg(*args, char *)));
-	// if (c == 'd' || c == 'i')
-	// 	return (ft_putnbr(va_arg(*args, int)));
-	// if (c == 'u')
-	// 	return (ft_putnbr(va_arg(*args, unsigned int)));
+	if (c == 'd' || c == 'i')
+		return (ft_putnbr(va_arg(*args, int)));
+	if (c == 'u')
+		return (ft_putunbr(va_arg(*args, unsigned int)));
 	if (c == 'x')
 		return (ft_puthex(va_arg(*args, unsigned int),"0123456789abcdef"));
 	if (c == 'X')

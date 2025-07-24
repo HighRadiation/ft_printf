@@ -6,11 +6,11 @@
 /*   By: boksuz <boksuz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:41:00 by boksuz            #+#    #+#             */
-/*   Updated: 2025/07/15 18:06:10 by boksuz           ###   ########.fr       */
+/*   Updated: 2025/07/24 17:55:03 by boksuz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putunbr(unsigned int n)
 {
