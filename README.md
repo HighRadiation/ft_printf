@@ -1,12 +1,12 @@
 # ft_printf
 
-## 📝 Proje Açıklaması
+##  Proje Açıklaması
 
 Bu proje, standart C kütüphanesinin `printf()` fonksiyonunun kişisel bir implementasyonudur. Proje, C programlama dilinde değişken sayıda argümanlarla çalışan fonksiyonları (variadic functions) öğrenmeyi amaçlar.
 
 > *"Çünkü ft_putnbr() ve ft_putstr() artık yeterli değil."*
 
-## 📋 İçindekiler
+##  İçindekiler
 
 1. [Giriş](#giriş)
 2. [Gereksinimler](#gereksinimler)
@@ -14,13 +14,13 @@ Bu proje, standart C kütüphanesinin `printf()` fonksiyonunun kişisel bir impl
 4. [Desteklenen Formatlar](#desteklenen-formatlar)
 5. [Bonus Kısım](#bonus-kısım)
 
-## 🚀 Giriş
+##  Giriş
 
 Bu projede, C dilinin en çok kullanılan fonksiyonlarından biri olan `printf()` fonksiyonunu yeniden oluşturacağız. Bu orta düzeyde zorlukta bir projedir ve C'de variadic (değişken argümanlı) fonksiyonların nasıl çalıştığını anlamamızı sağlar.
 
 Başarılı bir `ft_printf()` implementasyonu için temiz, yapılandırılmış ve genişletilebilir kod yazımı esastır. Projeyi tamamladıktan sonra, bu fonksiyonu kendi `libft` kütüphanenize dahil edebilirsiniz.
 
-## 📌 Gereksinimler
+##  Gereksinimler
 
 - Proje C dilinde yazılmalıdır
 - Kod, norm kurallarına tam olarak uymalıdır
@@ -29,7 +29,7 @@ Başarılı bir `ft_printf()` implementasyonu için temiz, yapılandırılmış 
 - Makefile aşağıdaki kuralları içermelidir: `$(NAME)`, `all`, `clean`, `fclean` ve `re`
 - Makefile `-Wall -Wextra -Werror` flagleriyle `cc` derleyicisini kullanmalıdır
 
-## 💻 Kurulum ve Kullanım
+##  Kurulum ve Kullanım
 
 ### Proje için
 
@@ -59,7 +59,7 @@ gcc -Wall -Wextra -Werror your_file.c -L. -lftprintf
 int ft_printf(const char *format, ...);
 ```
 
-## 🔍 Desteklenen Formatlar
+##  Desteklenen Formatlar
 
 | Format | Açıklama |
 |--------|----------|
@@ -73,7 +73,7 @@ int ft_printf(const char *format, ...);
 | `%X`   | Hexadecimal değeri büyük harflerle yazdırır |
 | `%%`   | Yüzde işareti yazdırır |
 
-## ⭐ Bonus Kısım
+##  Bonus Kısım
 
 Zorunlu kısım tamamen tamamlandıktan sonra, aşağıdaki özellikleri ekleyebilirsiniz:
 
